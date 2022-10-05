@@ -7,63 +7,59 @@
 
 body{
     font-family:"Revalia" ; Arial;
-}
-
-header{
-    height: 100vh;
-    width: 100vw;
     background-image: url(pictures/fond\ presentation.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.navbar{
+.citation{
+    color: white;
+    font-family: initial;
+    text-align: center;
+    font-style: italic;
+}
+
+.navbar .menu-hamburger{
+    display: none;
     position: absolute;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+    top: 35px;
+    right: 30px;
+    width: 35px;
 }
 
 .navbar a {
     color: aliceblue;
 }
 
-.navbar .logo {
-    font-size: 2em;
-    font-weight: bold;
+.navbar a:hover{
+    color: yellow;
 }
 
-.navbar .nav-links ul{
-    display: flex;
-}
-
-.navbar .nav-links ul li{
-    margin: 0 25px;
-}
-
-.navbar .nav-links ul li.active a{
-    color: #022E51;
-    font-weight: 600;
-}
-
-.navbar .menu-hamburger{
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    width: 35px;
-}
-
-
-.logo{
-    align-items: center;
+.otherspages{
+   display: flex;
+   margin: 0 25px;
 }
 
 @media screen and (max-width: 900px){
     .navbar{
         padding: 0;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    header{
+        height: 87vh;
+        width: 100vw;
+        
+    }
+
+    .otherspages{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navbar .logo {
@@ -104,5 +100,67 @@ header{
     margin: 25px 0;
     font-size: 1.2em;
 }
+
+.navbar .nav-links ul li.active a{
+    color: #022E51;
+    font-weight: 600;
+}
+
+.title{
+    display: none;
+}
+
+}
+
+@media screen and (min-width: 900px){
+
+    .logo{
+        display: none;
+    }
+
+    header{
+        height: 30vh;
+        width: 100vw;
+        
+    }
+
+    .navbar{
+        position: absolute;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar .logo {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    
+    .navbar .nav-links ul{
+        display: flex;
+    }
+    
+    .navbar .nav-links ul li{
+        margin: 0 25px;
+    }
+    
+    .navbar .nav-links ul li.active a{
+        color: #022E51;
+        font-weight: 600;
+    }
+
+    .title{
+        color: aliceblue;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .citation{
+    position: absolute; bottom: 20px;
+    }
+    
 }
 
