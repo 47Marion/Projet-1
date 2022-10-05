@@ -11,7 +11,7 @@ header{
 }
 
 body.bg-home{
-    font-family:"Revalia, Arial";
+    font-family:"Revalia", "Arial";
     background-image: url(pictures/fond-presentation.jpg);
     background-size: cover;
     background-position: center;
@@ -181,6 +181,10 @@ body{
     }
     .title,h1{
         padding: 110px;
+    }
+    
+    h2{
+        text-align: center;
     }
 }
 
