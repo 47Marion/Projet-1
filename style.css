@@ -6,7 +6,7 @@
 }
 
 header{
-    height: 100vh;
+    height: 30vh;
     width: 100vw;
 }
 
@@ -20,6 +20,7 @@ body.bg-home{
 
 body{
     background-color: #022E51;
+    font-family:"Revalia", "Arial";
 }
 
 .citation{
@@ -27,6 +28,7 @@ body{
     font-family: initial;
     text-align: center;
     font-style: italic;
+    justify-content: center;
 }
 
 .navbar .menu-hamburger{
@@ -49,7 +51,12 @@ body{
     color: yellow;
 }
 
-@media screen and (max-width: 768px){
+p{
+    color: aliceblue;
+    text-align: justify;
+}
+
+@media screen and (max-width: 900px){
     .navbar{
         padding: 0;
     }
@@ -59,7 +66,7 @@ body{
     }
 
     header{
-        height: 87vh;
+        height: 100vh;
         width: 100vw;
         
     }
@@ -120,12 +127,27 @@ body{
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 900px){
+
     header{
         height: 30vh;
         width: 100vw;
+        position: absolute;
+        display: flex;
+        padding: 40px;
+        justify-content: space-between;
+        align-items: right;
+        box-sizing: border-box;
     }
-
+    .title{
+        color: aliceblue;
+        text-align: center;
+        justify-content: center;
+        height: 450px;
+    }
+    .title,h1{
+        padding: 110px;
+    }
     .navbar{
         position: absolute;
         padding: 50px;
@@ -156,28 +178,12 @@ body{
         color: yellow;
         font-weight: 600;
     }
-
-    .citation{
-        position: absolute; 
-        justify-content: center;
-        bottom: 20px;
-    }
-
-    header{
-        position: absolute;
-        display: flex;
-        padding: 40px;
-        justify-content: space-between;
-        align-items: right;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
+    
     .title{
         color: aliceblue;
         text-align: center;
         justify-content: center;
-        height: 450px;
+        height: 350px;
     }
     .title,h1{
         padding: 110px;
@@ -187,4 +193,3 @@ body{
         text-align: center;
     }
 }
-
