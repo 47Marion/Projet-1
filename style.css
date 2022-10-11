@@ -34,7 +34,7 @@ header {
 }
 
 .navbar a{
-    color: #022E51;
+    color: black;
     text-decoration: none;
     list-style: none;
 }
@@ -42,7 +42,7 @@ header {
 nav {
     position: absolute;
     left: 0;
-    top: 200px;
+    top: 210px;
     background-color: rgba(255,255,255, 0.20);
     backdrop-filter: blur(7px);
     height: 82vh;
@@ -68,14 +68,14 @@ ul#menu-main-menu.menu-main{
 
 body.bg-home{
     font-family:"Revalia", "Arial";
-    background-image: url(pictures/fond-presentation.jpg);
+    background-image: url(pictures/fond3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 body{
-    background-color: #285185;
+    background-color: #596235;
     font-family:"Revalia", "Arial";
 }
 
@@ -91,7 +91,7 @@ body{
 
 .title.citation,h1,h2{
     padding: 20px;
-    color: whitesmoke;
+    color: white;
 }
 
 h1{
@@ -119,7 +119,9 @@ p{
 }
 
 .characters img{
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 5px solid black;
 }
 
