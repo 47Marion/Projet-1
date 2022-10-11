@@ -15,39 +15,53 @@
   <body>
     <header>
       <img src="pictures/logo.png" width="100" />
+      <div class="container" onclick="openCloseNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
       <nav class="navbar">
-        <div class="nav-links">
-          <img src="pictures/close.png" alt="" class="close" />
-          <ul>
-            <li class="active"><a href="/index.html">Home</a></li>
-            <ul>
-              <li><a href="/characters.html">Characters</a></li>
-              <li><a href="/tutorial.html">Tutorial</a></li>
-              <li><a href="/contact.html">Formulaire</a></li>
-            </ul>
-          </ul>
-        </div>
-        <img
-          src="pictures/burger.png"
-          alt="menu hamburger"
-          class="menu-hamburger"
-        />
+        <ul id="menu-main-menu" class="menu-main">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/characters.html">Characters</a></li>
+          <li><a href="/tutorial.html">Tutorial</a></li>
+          <li><a href="/contact.html">Formulaire</a></li>
+        </ul>
       </nav>
     </header>
+    <section class="tuto">
+      <br />
+      <h3>Apprendre à dessiner des mangas</h3>
+    </section>
+    <br />
+    <div class="picturetuto">
+      <img src="pictures/tuto dessin.jpg" alt="tuto" width="300" height="150" />
+      <br />
+      <br />
+      <p>
+        Un manga est une bande dessinée, généralement publiée au Japon, qui se
+        base sur un style graphique nippon. Cet article vous aidera à vous
+        familiariser avec les techniques de base du dessin de manga, en vous
+        référant à des styles de dessins animés desquels vous pouvez vous
+        inspirer.
+      </p>
+      <div class="video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/vMeY3dFXQcI"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <button
+        onclick="window.location.href = 'https://fr.wikihow.com/dessiner-des-mangas';"
+      >
+        Cliquez ici
+      </button>
+    </div>
   </body>
-  <script>
-    const menuHamburger = document.querySelector(".menu-hamburger");
-    const closeMenu = document.querySelector(".close");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuHamburger.addEventListener("click", () => {
-      console.log("j'ouvre ma nav");
-      navLinks.classList.add("mobile-menu");
-    });
-
-    closeMenu.addEventListener("click", () => {
-      console.log("je ferme ma nav");
-      navLinks.classList.remove("mobile-menu");
-    });
-  </script>
+  <script src="script.js"></script>
 </html>

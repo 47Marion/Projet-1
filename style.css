@@ -1,13 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #f0eff4;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.navbar a{
+    color: #022E51;
     text-decoration: none;
     list-style: none;
 }
 
-header{
-    height: 10vh;
-    width: 100vw;
+nav {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    background-color: rgba(255,255,255, 0.20);
+    backdrop-filter: blur(7px);
+    height: 82vh;
+    overflow: hidden;
+    width: 0;
+}
+nav ul {
+    position: relative;
+    list-style-type: none;
+    padding: 125px;
+}
+
+nav li{
+    margin: 30px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+ul#menu-main-menu.menu-main{
+    color: white;
+    text-align: center;
 }
 
 body.bg-home{
@@ -19,48 +75,8 @@ body.bg-home{
 }
 
 body{
-    background-color: #022E51;
+    background-color: #285185;
     font-family:"Revalia", "Arial";
-}
-
-.citation{
-    height: 100vh;
-    color: white;
-    font-family: initial;
-    text-align: center;
-    font-style: italic;
-    font-size: large;
-    justify-content: center;
-}
-
-h2{
-    
-    text-align: center;
-}
-
-.navbar .menu-hamburger{
-    display: none;
-    position: absolute;
-    top: 35px;
-    right: 30px;
-    width: 35px;
-}
-
-.navbar .close{
-    display: none;
-}
-
-.navbar a {
-    color: aliceblue;
-}
-
-.navbar a:hover{
-    color: yellow;
-}
-
-p{
-    color: aliceblue;
-    text-align: justify;
 }
 
 .rotate img {
@@ -73,147 +89,85 @@ p{
     transform: rotate(-15deg);
 }
 
-@media screen and (max-width: 900px){
-    body.bg-home{
-        background-image: url(pictures/fond-presentation.jpg);
-        height: 110vh;
-        width: 100vw;
-    }
+.title.citation,h1,h2{
+    padding: 20px;
+    color: whitesmoke;
+}
 
-    .navbar{
-        padding: 0;
-    }
+h1{
+    text-align: center;
+}
 
-    .logo{
-        display: none;
-    }
+.citation{
+    height: 75vh;
+    color: white;
+    font-family: initial;
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+    justify-content: center;
+    padding: 20px;
+}
 
-    .navbar .logo {
-        top: 40px;
-        left: 100px;
-    }
+p{
+    text-align: justify;
+    padding: 10px;
+}
 
-    .navbar .close {
-        width: 35px;
-        height: 35px;
-        display: flex;
-        top: 0;
-        right: 0;
-        z-index: 2rem;
-    }
-    .navbar .menu-hamburger{
-        display: block;
-    }
-    .nav-links{
-        top: 0;
-        left: 0;
-        position: absolute;
-        background-color: rgba(255,255,255, 0.20);
-        backdrop-filter: blur(7px);
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -100%;
-        transition: all 0.5s ease;
-    }
+.pictures,h2{
+    text-align: center;
+}
 
-    .nav-links.mobile-menu{
-        margin-left: 0;
-    }        
+.characters img{
+    background-position: center;
+    border: 5px solid black;
+}
 
-    .nav-links ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+h3{
+    padding: 20px;
+    color: whitesmoke;
+    text-align: center;
+}
 
-    .navbar .nav-links ul li{
-        margin: 25px 0;
-        font-size: 1.2em;
-    }
+button{
+    position:absolute;
+    bottom: 30px;
+    right: 50px;
+}
 
-    .navbar .nav-links ul li.active a{
-        color: yellow;
-        font-weight: 600;
-    }
-
-    .title{
-        display: none;
-    }
-
-    #pictures,h2{
-        padding: 20px;
-    }
-
-   
+.video{
+    position:relative
+    display: none;
 }
 
 @media screen and (min-width: 900px){
 
-    header{
-        height: 30vh;
-        width: 100vw;
-        position: absolute;
-        display: flex;
-        padding: 40px;
+    .container {
+        display: none;
+    }
+    nav {
+        position: initial;
+        top: initial;
+        left: initial;
+        width: initial;
+        height: initial; 
+        backdrop-filter: none;
+        background-color: none;
         justify-content: space-between;
-        align-items: right;
-        box-sizing: border-box;
-    }
-    .title{
-        color: aliceblue;
-        text-align: center;
-        justify-content: center;
-        height: 450px;
-    }
-    .title,h1{
-        padding: 110px;
-    }
-    .navbar{
-        position: absolute;
-        padding: 50px;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        justify-content: right;
-    }
-    
-    .navbar .logo {
-        font-size: 2em;
-        font-weight: bold;
-    }
-    
-    .navbar .nav-links ul{
-        display: flex;
-        margin-right: 100%;
-    }
-    
-    .navbar .nav-links ul li{
-        margin: 0 20px;
-        font-weight: bold;
-        font-size: large;
-    }
-    
-    .navbar .nav-links ul li.active a{
-        color: yellow;
-        font-weight: 600;
-    }
-    
-    .title{
-        color: aliceblue;
-        text-align: center;
-        justify-content: center;
-        height: 350px;
-    }
-    .title,h1{
-        padding: 110px;
-    }
-    
-    h2{
-        text-align: center;
     }
 
+    .nav ul{
+        display: flex;
+        margin: 0 30px;
+    }
+
+    .nav, ul,li{
+        display: flex;
+        align-items: center;
+        margin: 0 30px;
+    }
+  
+    .video{
+        position: initial;
+    }
 }

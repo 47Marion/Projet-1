@@ -15,39 +15,21 @@
   <body>
     <header>
       <img src="pictures/logo.png" width="100" />
+      <div class="container" onclick="openCloseNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
       <nav class="navbar">
-        <div class="nav-links">
-          <img src="pictures/close.png" alt="" class="close" />
-          <ul>
-            <li class="active"><a href="/index.html">Home</a></li>
-            <ul>
-              <li><a href="/characters.html">Characters</a></li>
-              <li><a href="/tutorial.html">Tutorial</a></li>
-              <li><a href="/contact.html">Formulaire</a></li>
-            </ul>
-          </ul>
-        </div>
-        <img
-          src="pictures/burger.png"
-          alt="menu hamburger"
-          class="menu-hamburger"
-        />
+        <ul id="menu-main-menu" class="menu-main">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/characters.html">Characters</a></li>
+          <li><a href="/tutorial.html">Tutorial</a></li>
+          <li><a href="/contact.html">Formulaire</a></li>
+        </ul>
       </nav>
     </header>
   </body>
-  <script>
-    const menuHamburger = document.querySelector(".menu-hamburger");
-    const closeMenu = document.querySelector(".close");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuHamburger.addEventListener("click", () => {
-      console.log("j'ouvre ma nav");
-      navLinks.classList.add("mobile-menu");
-    });
-
-    closeMenu.addEventListener("click", () => {
-      console.log("je ferme ma nav");
-      navLinks.classList.remove("mobile-menu");
-    });
-  </script>
+  <script src="script.js"></script>
 </html>
