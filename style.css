@@ -118,44 +118,76 @@ p{
     text-align: center;
 }
 
-.characters img{
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.flex-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; 
+}
+
+.flex-container div img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border: 5px solid black;
 }
 
 h3{
-    padding: 20px;
+    padding: 10px;
     color: whitesmoke;
     text-align: center;
 }
 
+.video{
+    display: none;
+}
+
 button{
     position:absolute;
-    bottom: 30px;
+    bottom: 40px;
     right: 50px;
 }
 
-.video{
-    position:relative
-    display: none;
+form{
+    width: 350px;
+    padding-top: 30px;
+    text-align: center;
+    justify-content: center;
 }
+
+input{
+    width: 80vw;
+}
+
+textarea{
+    width: 80vw;
+    height: 20vh;
+}
+
 
 @media screen and (min-width: 900px){
 
     .container {
         display: none;
     }
+
     nav {
         position: initial;
         top: initial;
         left: initial;
         width: initial;
         height: initial; 
-        backdrop-filter: none;
-        background-color: none;
         justify-content: space-between;
+    }
+
+    .navbar{
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: initial;
     }
 
     .nav ul{
@@ -165,11 +197,95 @@ button{
 
     .nav, ul,li{
         display: flex;
-        align-items: center;
+        align-items: right;
         margin: 0 30px;
     }
-  
-    .video{
-        position: initial;
+
+    a{
+        color: yellow;
+        text-decoration:none;
+        position:relative;
+        padding:6px 0;
+        -webkit-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        transition: all 0.8s;
+      }
+
+      a:after{
+        content:'';
+        width:0%;
+        margin-left:50%;
+        height:2px;
+        bottom:0;
+        left:0;
+        -webkit-border-radius: 40%;
+        -moz-border-radius: 40%;
+        border-radius:40%;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition:all 0.5s;
+        position:absolute;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition:all 0.5s;
+      }
+      
+      a:hover:after {
+        background-color: yellow;
+        width:60%;
+        margin-left:20%;
+        -moz-box-shadow: 0px 0px 10px yellow;
+        -webkit-box-shadow: 0px 0px 10px yellow;
+        -o-box-shadow: 0px 0px 10px yellow;
+        box-shadow:0px 0px 10px yellow;
+      }
+
+    .title{
+
     }
+
+    li{
+        padding: 20px;
+    }
+  
+    .flex-container div img{
+        display: initial;
+        display: absolute; 
+    }
+
+    p{
+        text-align: justify;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-direction: row; 
+        margin: 00px 30px;
+    }
+
+    .flex-container .picturetuto img{
+        display: flex;
+        flex-direction: center;
+        margin: 30px 200px;
+    }
+
+    .video{
+        display: initial;
+    }
+  
+    form{
+        width: initial;
+        padding-top: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /*revoir le java du form*/
+
 }

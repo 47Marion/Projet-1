@@ -1,5 +1,5 @@
 function openCloseNav(x) {
-    var nav = document.querySelector("nav");
+    let nav = document.querySelector("nav");
     if (nav.style.width != "auto") {
         x.classList.add("change");
         nav.style.width = "auto";
@@ -8,3 +8,4 @@ function openCloseNav(x) {
         nav.style.width = "0";
     }
 }
+
