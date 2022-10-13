@@ -1,11 +1,12 @@
 function openCloseNav(x) {
-    let nav = document.querySelector("nav");
-    if (nav.style.width != "auto") {
-        x.classList.add("change");
-        nav.style.width = "auto";
-    } else {
+    
+    let menu = document.querySelector(".menu-main");
+    if (menu.style.width === "100%") {
         x.classList.remove("change");
-        nav.style.width = "0";
+        menu.style.width = "0";
+    } else {
+        x.classList.add("change");
+        menu.style.width = "100%";
     }
 }
 
