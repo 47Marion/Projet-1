@@ -27,7 +27,7 @@ header {
 .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #f0eff4;
+    background-color: white;
     margin: 6px 0;
     transition: 0.5s;
 }
@@ -80,7 +80,7 @@ ul#menu-main-menu.menu-main{
 
 body.bg-home{
     font-family:"Revalia", "Arial";
-    background-image: url(pictures/fond3.jpg);
+    background-image: url(pictures/fond11.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,14 +88,14 @@ body.bg-home{
 
 body.bg-contact{
     font-family:"Revalia", "Arial";
-    background-image: url(pictures/fond.jpg);
+    background-image: url(pictures/contact.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 body{
-    background-color: #596235;
+    background-color: #C2483A;
     font-family:"Revalia", "Arial";
     min-height: 100vh;
 }
@@ -229,7 +229,7 @@ input::placeholder{
 
     .navbar a{
         font-weight: bold;
-        color: #f0eff4;
+        color: white;
     }
 
     .menu-main {
@@ -337,10 +337,6 @@ input::placeholder{
 
     .video{
         display: initial;
-    }
-
-    body.bg-contact{
-        background-image: initial;
     }
   
     form{
