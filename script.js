@@ -10,3 +10,12 @@ function openCloseNav(x) {
     }
 }
 
+
+const message = "Bien reçu ! Je ne pars pas dans une aventure ennuyeuse !";
+const form = document.getElementById("contactForm");
+if (form != undefined){  
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert(message);
+    });
+}

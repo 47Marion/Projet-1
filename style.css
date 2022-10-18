@@ -86,6 +86,14 @@ body.bg-home{
     background-repeat: no-repeat;
 }
 
+body.bg-contact{
+    font-family:"Revalia", "Arial";
+    background-image: url(pictures/fond.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 body{
     background-color: #596235;
     font-family:"Revalia", "Arial";
@@ -184,14 +192,20 @@ h3{
 
 button{
     position:absolute;
-    bottom: 40px;
+    bottom: 240px;
     right: 50px;
 }
 
 form{
-   padding: 30px;
+    padding: 30px;
     text-align: center;
     justify-content: center;
+}
+
+label{
+    color:yellow;
+    font-weight: bold;
+    text-shadow:10px 4px 4px black;
 }
 
 input, textarea{
@@ -202,11 +216,20 @@ textarea{
     height: 250px;
 }
 
+input::placeholder{
+    color:#596235;
+    font-weight: bold;
+}
 
 @media screen and (min-width: 480px){
 
     .burger {
         display: none;
+    }
+
+    .navbar a{
+        font-weight: bold;
+        color: #f0eff4;
     }
 
     .menu-main {
@@ -306,8 +329,18 @@ textarea{
         margin: 30px 200px;
     }
 
+    button{
+        position:absolute;
+        bottom: 0px;
+        right: 210px;
+    }
+
     .video{
         display: initial;
+    }
+
+    body.bg-contact{
+        background-image: initial;
     }
   
     form{
@@ -317,5 +350,4 @@ textarea{
         justify-content: center;
     }
 
-    /*revoir le java du form*/
 }
