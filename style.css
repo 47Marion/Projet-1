@@ -95,7 +95,7 @@ body.bg-contact{
 }
 
 body{
-    background-color: #C2483A;
+    background-color: grey;
     font-family:"Revalia", "Arial";
     min-height: 100vh;
 }
@@ -192,8 +192,8 @@ h3{
 
 button{
     position:absolute;
-    bottom: 240px;
-    right: 50px;
+    bottom: 18%;
+    right: 40px;
 }
 
 form{
@@ -217,11 +217,11 @@ textarea{
 }
 
 input::placeholder{
-    color:#596235;
+    color: grey;
     font-weight: bold;
 }
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 468px){
 
     .burger {
         display: none;
@@ -297,10 +297,23 @@ input::placeholder{
     li{
         padding: 20px;
     }
-  
+
+    body.bg-characters{
+        font-family:"Revalia", "Arial";
+        background-image: url(pictures/livre.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .flex-container div img{
         display: initial;
-        display: absolute; 
+        display: absolute;
+    }
+
+    .rotate{
+        padding-bottom: 200px;
+        padding-top: 105px;
     }
 
     .title{
@@ -309,6 +322,15 @@ input::placeholder{
 
     p{
         text-align: justify;
+        padding: 20px;   
+    }
+
+    .explication p{
+        text-align: justify;
+        padding: 80px;  
+        -webkit-backdrop-filter: blur(15px); 
+        backdrop-filter: blur(15px);
+        background-color: rgba(182, 182, 182, 0.2);
     }
 
     .grid-container {
@@ -320,7 +342,15 @@ input::placeholder{
     .flex-container {
         display: flex;
         flex-direction: row; 
-        margin: 0px 30px;
+        margin: 0px 80px;
+    }
+
+    body.bg-tutorial{
+        font-family:"Revalia", "Arial";
+        background-image: url(pictures/pencil.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .flex-container .picturetuto img{
@@ -332,12 +362,20 @@ input::placeholder{
     button{
         position:absolute;
         bottom: 0px;
-        right: 210px;
+        right: 10px;
+    }
+
+    footer{
+        position: absolute;
+        left: 75%;
+        padding-bottom: 0%;
     }
 
     .video{
         display: initial;
+        
     }
+
   
     form{
         width: initial;
