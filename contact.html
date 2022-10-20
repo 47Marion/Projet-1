@@ -12,7 +12,7 @@
       type="text/css"
     />
   </head>
-  <body class="bg-home">
+  <body class="bg-contact">
     <header>
       <img src="pictures/logo.png" width="100" />
       <nav class="navbar">
@@ -29,23 +29,34 @@
         </ul>
       </nav>
     </header>
-    <section class="title">
-      <br />
-      <h1>ONE PIECE</h1>
-    </section>
-    <section class="citation">
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h2>
-        La différence entre un manga et la réalité, c'est probablement que leurs
-        défauts sont parfaits contrairement au réel. (Kiraadict)
-      </h2>
+    <section id="contact">
+      <h2>.... On reste en contact !</h2>
+      <form id="contactForm">
+        <label for="name">First name:</label>
+        <br />
+        <br />
+        <input type="text" id="name" name="name" placeholder="name" />
+        <br />
+        <br />
+        <label for="email">Email:</label>
+        <br />
+        <br />
+        <input
+          type="email"
+          id="email"
+          placeholder="exemple@manga-onepiece.fr"
+        />
+        <br />
+        <br />
+        <label for="message">Message:</label>
+        <br />
+        <br />
+        <textarea id="message" name="message"></textarea>
+        <br />
+        <br />
+        <br />
+        <input type="submit" value="Dessiner c'est avancé !" />
+      </form>
     </section>
   </body>
   <script src="script.js"></script>

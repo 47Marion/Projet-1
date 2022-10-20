@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 201;
+    position: relative;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255, 0.20);
+    backdrop-filter: blur(7px);
+    height: 100vh;
+    overflow: hidden;
+    width: 0px;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    transition: width 0.3s ease-in;
+}
+
+nav li{
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+ul#menu-main-menu.menu-main{
+    color: white;
+    text-align: center;
+}
+
+body.bg-home{
+    font-family:"Revalia", "Arial";
+    background-image: url(pictures/fond11.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.bg-contact{
+    font-family:"Revalia", "Arial";
+    background-image: url(pictures/contact.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body{
+    background-color: grey;
+    font-family:"Revalia", "Arial";
+    min-height: 100vh;
+}
+
+.rotate img {
+    -webkit-transition:all 0.5s ease;
+    transition: transform 3.5s ease;
+}
+
+.rotate:hover img {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+.title, h2, h3{
+    transition:  .5s;
+    animation: slideDown 10s;
+}
+
+.title, h2, h3{
+    transform:  scale(1.1);
+}
+
+@keyframes slideDown {
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+.title.citation,h1,h2{
+    padding: 20px;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+.citation{
+    color: white;
+    font-family: initial;
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+    justify-content: center;
+    padding: 20px;
+}
+
+p{
+    text-align: justify;
+    padding: 10px;
+}
+
+.pictures,h2{
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column; 
+}
+
+.flex-container div img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+}
+
+h3{
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.video{
+    display: none;
+}
+
+button{
+    position:absolute;
+    bottom: 23%;
+    right: 30px;
+}
+
+footer{
+    position: absolute;
+    left: 30%;
+}
+
+form{
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+label{
+    color:yellow;
+    font-weight: bold;
+    text-shadow:10px 4px 4px black;
+}
+
+input, textarea{
+    width: 100%;
+}
+
+textarea{
+    height: 250px;
+}
+
+input::placeholder{
+    color: grey;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 468px){
+
+    .burger {
+        display: none;
+    }
+
+    .navbar a{
+        font-weight: bold;
+        color: white;
+    }
+
+    .menu-main {
+        position: initial;
+        top: initial;
+        left: initial;
+        width: initial;
+        height: initial; 
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        justify-content: space-between;
+        background-color: initial;
+        flex-direction: row;
+    }
+
+    .menu-main li {
+        margin-bottom: 0;
+    }
+
+    .nav, ul, li{
+        display: flex;
+        align-items: right;
+        margin: 0 30px;
+    }
+
+    a{
+        color: yellow;
+        text-decoration:none;
+        position:relative;
+        padding:6px 0;
+        -webkit-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        transition: all 0.8s;
+      }
+
+      a:after{
+        content:'';
+        width:0%;
+        margin-left:50%;
+        height:2px;
+        bottom:0;
+        left:0;
+        -webkit-border-radius: 40%;
+        -moz-border-radius: 40%;
+        border-radius:40%;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition:all 0.5s;
+        position:absolute;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition:all 0.5s;
+      }
+      
+      a:hover:after {
+        background-color: yellow;
+        width:60%;
+        margin-left:20%;
+        -moz-box-shadow: 0px 0px 10px yellow;
+        -webkit-box-shadow: 0px 0px 10px yellow;
+        -o-box-shadow: 0px 0px 10px yellow;
+        box-shadow:0px 0px 10px yellow;
+      }
+
+    li{
+        padding: 20px;
+    }
+
+    body.bg-characters{
+        font-family:"Revalia", "Arial";
+        background-image: url(pictures/livre.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .flex-container div img{
+        display: initial;
+        display: absolute;
+    }
+
+    .rotate{
+        padding-bottom: 200px;
+        padding-top: 105px;
+    }
+
+    .title{
+        font-size: x-large;
+    }
+
+    p{
+        text-align: justify;
+        padding: 20px;   
+    }
+
+    .explication p{
+        text-align: justify;
+        padding: 80px;  
+        -webkit-backdrop-filter: blur(15px); 
+        backdrop-filter: blur(15px);
+        background-color: rgba(182, 182, 182, 0.2);
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-direction: row; 
+        margin: 0px 80px;
+    }
+
+    body.bg-tutorial{
+        font-family:"Revalia", "Arial";
+        background-image: url(pictures/pencil.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .flex-container .picturetuto img{
+        display: flex;
+        flex-direction: center;
+        margin: 20px 250px;
+    }
+
+    button{
+        position:absolute;
+        bottom: 0px;
+        right: 10px;
+    }
+
+    footer{
+        position: relative;
+        left: 90%;
+    }
+
+    .video{
+        display: initial;
+        
+    }
+
+  
+    form{
+        width: initial;
+        padding-top: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
