@@ -192,8 +192,13 @@ h3{
 
 button{
     position:absolute;
-    bottom: 18%;
-    right: 40px;
+    bottom: 23%;
+    right: 30px;
+}
+
+footer{
+    position: absolute;
+    left: 30%;
 }
 
 form{
@@ -356,7 +361,7 @@ input::placeholder{
     .flex-container .picturetuto img{
         display: flex;
         flex-direction: center;
-        margin: 30px 200px;
+        margin: 20px 250px;
     }
 
     button{
@@ -366,9 +371,8 @@ input::placeholder{
     }
 
     footer{
-        position: absolute;
-        left: 75%;
-        padding-bottom: 0%;
+        position: relative;
+        left: 90%;
     }
 
     .video{
