@@ -256,7 +256,6 @@ input::placeholder{
 
     .nav, ul, li{
         display: flex;
-        align-items: right;
         margin: 0 30px;
     }
 
@@ -313,7 +312,6 @@ input::placeholder{
 
     .flex-container div img{
         display: initial;
-        display: absolute;
     }
 
     .rotate{
@@ -360,7 +358,6 @@ input::placeholder{
 
     .flex-container .picturetuto img{
         display: flex;
-        flex-direction: center;
         margin: 20px 250px;
     }
 
@@ -377,10 +374,8 @@ input::placeholder{
 
     .video{
         display: initial;
-        
     }
 
-  
     form{
         width: initial;
         padding-top: 30px;
