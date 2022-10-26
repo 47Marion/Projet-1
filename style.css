@@ -198,6 +198,7 @@ button{
 
 footer{
     position: absolute;
+    align-item:center;
 }
 
 form{
