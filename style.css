@@ -111,7 +111,7 @@ body{
 }
 
 .title, h2, h3{
-    transition:  .5s;
+    transition:  .4s;
     animation: slideDown 5s;
 }
 
